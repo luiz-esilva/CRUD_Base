@@ -3,7 +3,7 @@
     $scriptDir = dirname(__FILE__);
 
     // Caminho completo para o arquivo autoload.php
-    $autoloadPath = realpath($scriptDir . '/../../vendor/autoload.php');
+    $autoloadPath = realpath($scriptDir . '/../../../vendor/autoload.php');
 
     // Verifica se o arquivo existe antes de tentar incluí-lo
     if (file_exists($autoloadPath)) {

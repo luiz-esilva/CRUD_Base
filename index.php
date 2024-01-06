@@ -6,9 +6,9 @@
     <title>Dusis - CRUD</title>
 </head>
 <body>
-    <form action="App\Forms\Cad_Usuarios.php" method="POST">
+    <form action="App\Forms\Usuarios\Cad_Usuarios.php" method="POST">
         <input type="text" placeholder="Insira o nome de usuário" name="nome_usuario" id="nome_usuario" required>
-        <input type="text" placeholder="Insira a senha de usuário" name="senha_usuario" id="senha_usuario" required>
+        <input type="password" placeholder="Insira a senha de usuário" name="senha_usuario" id="senha_usuario" required>
         <input type="text" placeholder="Insira o Primeiro Nome" name="primeiro_nome" id="primeiro_nome" required>
         <input type="text" placeholder="Insira o Sobrenome" name="sobrenome_usuario" id="sobrenome_usuario" required>
         <input type="date" name="data_nascimento" id="data_nascimento" required>
@@ -45,7 +45,7 @@
         </tbody>
     </table>
 
-    <form action="App\Forms\Att_Usuarios.php" method="POST">
+    <form action="App\Forms\Usuarios\Att_Usuarios.php" method="POST">
         <select name="att_id" id="att_id">
             <?php
                 require_once 'vendor/autoload.php';
@@ -62,7 +62,7 @@
         <input type="submit" value="Atualizar Informações">
     </form>
 
-    <form action="App\Forms\Del_Usuarios.php" method="POST">
+    <form action="App\Forms\Usuarios\Del_Usuarios.php" method="POST">
         <select name="del_id" id="del_id" required>
             <?php
                 require_once 'vendor/autoload.php';

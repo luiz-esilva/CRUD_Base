@@ -3,7 +3,7 @@
     $scriptDir = dirname(__FILE__);
 
     // Caminho completo para o arquivo autoload.php
-    $autoloadPath = realpath($scriptDir . '/../../vendor/autoload.php');
+    $autoloadPath = realpath($scriptDir . '/../../../vendor/autoload.php');
 
     // Verifica se o arquivo existe antes de tentar incluí-lo
     if (file_exists($autoloadPath)) {
@@ -22,6 +22,12 @@
             $primeiro_nome = $_POST['primeiro_nome'];
             $sobrenome_usuario = $_POST['sobrenome_usuario'];
             $nascimento = $_POST['data_nascimento'];
+
+            // Para checar se a senha está correta utilize o código abaixo
+            // $senha = password_verify('senha',$senhaarmazenadanobancodedados);
+            // A variável $senha recebera true ou false
+
+            $senha_usuario = password_hash($senha_usuario, PASSWORD_DEFAULT);
 
             $usuario = new \App\Models\Usuarios();
             $usuario->setUsuario($nome_usuario);
